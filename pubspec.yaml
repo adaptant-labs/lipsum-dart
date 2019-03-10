@@ -2,4 +2,4 @@ name: lorem
 description: Lorem text generator
 
 dev_dependencies:
-  unittest: any
+  test: any
