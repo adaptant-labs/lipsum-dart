@@ -1,4 +1,5 @@
 name: lorem
+version: 0.1.1
 description: Lorem text generator
 
 dev_dependencies:
