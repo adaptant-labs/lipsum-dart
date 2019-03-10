@@ -2,10 +2,11 @@
 library lorem;
 
 import "dart:math";
+
 part "words.dart";
 
 class Lorem {
-  _randomInt ( int min,  int max ) {
+  _randomInt(int min, int max) {
     Random rnd = new Random();
     return rnd.nextInt((max - min) + 1) + min;
   }
@@ -16,11 +17,11 @@ class Lorem {
   /// generated length.
   ///
   /// Example: "Nunc pulvinar sapien et ligula."
-  String createSentence({int sentenceLength : -1}){
+  String createSentence({int sentenceLength: -1}) {
     int wordIndex;
     String sentence;
 
-    if(sentenceLength<0){
+    if (sentenceLength < 0) {
       sentenceLength = _randomInt(5, 20);
     }
 
@@ -35,13 +36,13 @@ class Lorem {
   ///
   /// Paragraphs are comprised of a random number of sentences, or explicitly
   /// [numSentences] long.
-  String createParagraph({int numSentences : -1}){
+  String createParagraph({int numSentences: -1}) {
     List<String> sentences = [];
 
-    if(numSentences<0){
-      numSentences = _randomInt(3,5);
+    if (numSentences < 0) {
+      numSentences = _randomInt(3, 5);
     }
-    for(var i=0; i< numSentences; i++){
+    for (var i = 0; i < numSentences; i++) {
       sentences.add(createSentence());
     }
 
@@ -53,17 +54,16 @@ class Lorem {
   /// Each text is comprised of [numParagraphs] paragraphs, each of which
   /// contain [numSentences] sentences. If either parameter is omitted, a
   /// random number is generated.
-  String createText({int numParagraphs : -1, int numSentences : -1}){
+  String createText({int numParagraphs: -1, int numSentences: -1}) {
     List<String> paragraphs = [];
 
-    if(numParagraphs<0){
-      numParagraphs = _randomInt(3,7);
+    if (numParagraphs < 0) {
+      numParagraphs = _randomInt(3, 7);
     }
-    for(var i=0; i< numParagraphs; i++){
+    for (var i = 0; i < numParagraphs; i++) {
       paragraphs.add(createParagraph(numSentences: numSentences));
     }
 
     return paragraphs.getRange(0, paragraphs.length).join("\n");
   }
-
 }
