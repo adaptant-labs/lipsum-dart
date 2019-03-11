@@ -1,0 +1,7 @@
+language: dart
+dart:
+- stable
+before_install:
+  - chmod +x ./tools/run_test.sh
+script:
+  - ./tools/run_test.sh
