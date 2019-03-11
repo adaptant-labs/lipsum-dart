@@ -10,7 +10,7 @@ _randomInt(int min, int max) {
 }
 
 /// Creates [numWords] number of random words.
-String createWord({int numWords: 1}) {
+String createWord({int numWords = 1}) {
   Random _random;
 
   if (numWords > 1) {
@@ -26,7 +26,7 @@ String createWord({int numWords: 1}) {
 /// Sentences are either exactly [sentenceLength] words in length, or a randomly
 /// generated length. [numSentences] defines the number of sentences generated.
 /// Returned sentences are punctuated.
-String createSentence({int sentenceLength: -1, int numSentences: 1}) {
+String createSentence({int sentenceLength = -1, int numSentences = 1}) {
   int wordIndex;
   String sentence;
 
@@ -49,7 +49,7 @@ String createSentence({int sentenceLength: -1, int numSentences: 1}) {
 /// Paragraphs are comprised of a random number of sentences, or explicitly
 /// [numSentences] long. [numParagraphs] specifies the number of paragraphs
 /// to generate.
-String createParagraph({int numSentences: -1, int numParagraphs: 1}) {
+String createParagraph({int numSentences = -1, int numParagraphs = 1}) {
   List<String> sentences = [];
 
   if (numParagraphs > 1)
@@ -70,7 +70,7 @@ String createParagraph({int numSentences: -1, int numParagraphs: 1}) {
 /// Each text is comprised of [numParagraphs] paragraphs, each of which
 /// contain [numSentences] sentences. If either parameter is omitted, a
 /// random number is generated.
-String createText({int numParagraphs: -1, int numSentences: -1}) {
+String createText({int numParagraphs = -1, int numSentences = -1}) {
   List<String> paragraphs = [];
 
   if (numParagraphs < 0) {
