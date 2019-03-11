@@ -1,5 +1,5 @@
 name: lipsum
-version: 1.0.0
+version: 1.0.0+1
 description: >
   A simple lorem ipsum text generator. Based off of Andres Araujo's lorem-dart plugin.
 authors:
