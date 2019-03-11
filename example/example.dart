@@ -1,9 +1,11 @@
 import 'package:lipsum/lipsum.dart' as lipsum;
 
 main() {
+  print("Generating random words: " + lipsum.createWord(numWords: 4));
+
   var sentence = lipsum.createSentence();
 
-  print("Generating a random sentence:\n\n" + sentence);
+  print("\nGenerating a random sentence:\n\n" + sentence);
 
   var paragraph = lipsum.createParagraph();
 

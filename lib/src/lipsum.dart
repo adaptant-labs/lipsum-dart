@@ -9,10 +9,23 @@ _randomInt(int min, int max) {
   return rnd.nextInt((max - min) + 1) + min;
 }
 
+/// Creates [numWords] number of random words.
+String createWord({int numWords: 1}) {
+  Random _random;
+
+  if (numWords > 1) {
+    return createSentence(sentenceLength: numWords, numSentences: 1);
+  }
+
+  _random = Random();
+  return words[_random.nextInt(words.length)];
+}
+
 /// Creates random sentences.
 ///
 /// Sentences are either exactly [sentenceLength] words in length, or a randomly
 /// generated length. [numSentences] defines the number of sentences generated.
+/// Returned sentences are punctuated.
 String createSentence({int sentenceLength: -1, int numSentences: 1}) {
   int wordIndex;
   String sentence;
