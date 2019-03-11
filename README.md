@@ -1,4 +1,4 @@
-lorem-dart
+lipsum-dart
 ==========
 
-A simple library to generate lorem ipsum text
+A lorem ipsum text generator for Dart.
