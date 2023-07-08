@@ -6,6 +6,6 @@ authors:
   - Adaptant Labs <labs@adaptant.io>
 homepage: https://github.com/adaptant-labs/lipsum-dart
 environment:
-  sdk: '>=1.24.3 <3.0.0'
+  sdk: ">=3.0.0 <4.0.0"
 dev_dependencies:
   test: any
